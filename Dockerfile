@@ -3,7 +3,7 @@ FROM debian:9.5-slim
 WORKDIR /
 COPY . /
 
-RUN apt update && apt install -y curl
+RUN echo ""
 
 ADD entrypoint.sh /entrypoint.sh
 ENTRYPOINT ["/entrypoint.sh"]
