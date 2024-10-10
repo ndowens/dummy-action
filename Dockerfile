@@ -1,9 +1,8 @@
-FROM debian:9.5-slim
+FROM cachyos/cachyos
 
 WORKDIR /
-COPY . /
 
-RUN echo ""
+RUN git clone https://GitHub.com/ndowens/pkgs
 
-ADD entrypoint.sh /entrypoint.sh
-ENTRYPOINT ["/entrypoint.sh"]
+
+RUN git diff HEAD~1..HEAD~2 --name-only 
