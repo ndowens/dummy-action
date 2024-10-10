@@ -1,4 +1,4 @@
-FROM cachyos/cachyos
+FROM archlinux:latest
 
 WORKDIR /pkgs
 RUN git clone https://GitHub.com/ndowens/pkgs
